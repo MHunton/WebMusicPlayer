@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <script src="https://kit.fontawesome.com/703e7aef6e.js" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <title>Web Music Player</title>
+</head>
+<body>
+    <audio src="songs/BG.MP3" id="currentSong"></audio>
+    <img id="thumbnail" src= 'thumbnails/BG.JPG'>
+    <div class="container">
+        <div id='songTitle'>Bad Guy - Billie Eillish</div>
+        <div class="buttons">
+            <i class='fas fa-play' class='button' id="mainBtn"></i>
+            <i class='fas fa-step-backward' class='button' id="previousSong"></i>
+            <i class='fas fa-step-forward' class='button' id="nextSong"></i>
+            <i class="fas fa-random" class='button' id="shuffle"></i>
+            <i class="fas fa-sync" id="loop"></i>
+        </div>
+        <div class="progress">
+            <div id="currentProg">0:00</div>
+            <input type="range" id="progressBar" min="0" max="" value="0" >
+            <div id="duration">0:00</div>
+        </div>
+        <div class="volumeContr">
+            <input type="range" id="volume" value="1.0" min="0.0" max="1.0" step="0.02">
+            <i class="fas fa-volume-up" id="mute"></i>
+            <p id="volumePercent">100%</p>
+        </div>    
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>

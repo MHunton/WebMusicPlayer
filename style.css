@@ -1,0 +1,314 @@
+body {
+    background: #4f4f4f;
+    font-family: Anton;
+    user-select: none;
+    color: #be4e32;
+    margin: 0;
+}
+
+#thumbnail{
+    position: absolute;
+    margin: auto;
+    top: 5%;
+    left: 0;
+    right: 0;
+    height: 600px;
+    width: 600px;
+    border-radius: 50px;
+}
+
+.container{
+    position: absolute;
+    bottom: 0;
+    background:#262626 ;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 100pt;
+}
+
+#songTitle{
+    position: absolute;
+    font-size: 32px;
+    top: 20%;
+    left: 2%;
+    font-family: Anton;
+}
+
+.buttons{
+    position: absolute;
+    width: 20%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    top: 15%;
+    z-index: 10;
+}
+
+#mainBtn{
+    position: absolute;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+#previousSong, #nextSong{
+    position: absolute;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+#previousSong{
+    left: 25%;
+}
+
+#nextSong{
+    right: 25%;
+}
+
+#loop{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    font-size: 35px;
+    right: 5%;
+}
+
+#shuffle{
+    position: absolute;
+    cursor: pointer;
+    font-size: 35px;
+    left: 5%;
+}
+
+.progress{
+    position: absolute;
+    bottom: 15%;
+    width: 60%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    z-index: 10;
+}
+
+#progressBar{
+    position: absolute;
+    width: 90%;
+    margin: 0;
+}
+
+#currentProg{
+    position: absolute;
+    width: 30px;
+    left: 0;
+}
+
+#duration{
+    position: absolute;
+    width: 30px;
+    right: 0;
+}
+
+.volumeContr{
+    position: absolute;
+    width: 125pt;
+    height: 100%;
+    right: 3%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#volume{
+    position: absolute;
+    transform: rotate(270deg);
+    width: 80pt;
+    right: 10%;
+    bottom: 40%;
+}
+
+#volumePercent{
+    position: absolute;
+    left: 2%;
+    font-size: 30px;
+}
+
+#mute{
+    position: absolute;
+    right: 2%;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+    #thumbnail{
+        width: 550px;
+        height: 550px;
+    }
+    
+    .container{
+        height: 150pt;
+    }
+
+    #songTitle{
+        position: absolute;
+        top: 2%;
+        left: 2%;
+    }
+
+    .buttons{
+        width: 30%;
+        top: 35%;
+    }
+
+    .progress{
+        width: 80%;
+    }
+
+    .volumeContr{
+        position: absolute;
+        width: 170px;
+        top: -50px;
+    }
+
+    #volumePercent{
+        left: 10%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .volumeContr{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #songTitle{
+        font-size: 30px;
+    }
+    
+    #thumbnail{
+        width: 70vw;
+        height: 60vh;
+    }
+
+    .buttons{
+        width: 40%;
+        top: 50%;
+    }
+
+    .volumeContr{
+        height: 90%;
+        top: 0;
+    }
+
+    .progress{
+        width: 90%;
+    }
+
+    #progressBar{
+        width: 85%;
+    }
+
+    
+}
+
+@media only screen and (max-width: 550px) {
+    #songTitle{
+        font-size: 30px;
+    }
+
+    #thumbnail{
+        width: 90vw;
+    }
+
+    .buttons{
+        width: 60%;
+        top: 50%;
+    }
+
+    .volumeContr{
+        height: 90%;
+        top: 0;
+    }
+
+    #volumePercent{
+        font-size: 25px;
+        left: 15%;
+    }
+
+    #mute{
+        font-size: 35px;
+        right: 7%;
+    }
+
+    #progressBar{
+        width: 80%;
+    }
+}   
+
+@media only screen and (max-width: 400px) {
+    #thumbnail{
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .buttons {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #thumbnail{
+        width: 90vw;
+        height: 45vh;
+    }
+
+    #songTitle{
+        font-size: 25px;
+    }
+
+    .progress{
+        width: 100%;
+    }
+
+    #progressBar{
+        width: 70%;
+    }
+
+    #duration{
+        right: 2%;
+    }
+
+    #currentProg{
+        left: 2%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      cursor: pointer;
+      -webkit-appearance: none;
+      border-radius: 20px;
+      background-color: #4f4f4f;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #34b29b;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 15px;
+      -webkit-appearance: none;
+      margin-top: -5px;
+      height: 20px;
+      border-radius: 50%;
+      background: #e1e1e1;
+      box-shadow: -2100px 0 0 2100px #34b29b;
+    }
+}
